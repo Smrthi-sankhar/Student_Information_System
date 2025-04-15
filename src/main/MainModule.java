@@ -28,7 +28,7 @@ public class MainModule {
             System.out.println("7. Exit");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
-            sc.nextLine(); // Clear buffer
+            sc.nextLine(); 
 
             try {
                 switch (choice) {
@@ -63,7 +63,7 @@ public class MainModule {
                             sis.enrollStudentInCourse(student, course);
                             System.out.println("done!! " + firstName + " " + lastName + " enrolled in course " + courseId);
                         } catch (DuplicateEnrollmentException e) {
-                            System.out.println("⚠️ " + e.getMessage());
+                            System.out.println(" oops" + e.getMessage());
                         }
                         break;
                         
@@ -129,10 +129,10 @@ public class MainModule {
                         // Task: Record Payment by Student
                         System.out.print("Enter Student ID: ");
                         int studentId = sc.nextInt();
-                        sc.nextLine(); // Clear buffer
+                        sc.nextLine(); 
                         System.out.print("Enter Payment Amount: ");
                         double amount = sc.nextDouble();
-                        sc.nextLine(); // Clear buffer
+                        sc.nextLine(); 
                         System.out.print("Enter Payment Date (yyyy-mm-dd): ");
                         Date paymentDate = Date.valueOf(sc.nextLine());
 
@@ -143,8 +143,6 @@ public class MainModule {
                         break;
 
                     case 6:
-                        // Task: Generate Enrollment Report
-          
                         System.out.print("Enter Course ID for Report: ");
                         int reportCourseId = Integer.parseInt(sc.nextLine());
                         Course reportCourse = new Course();
@@ -160,7 +158,7 @@ public class MainModule {
                         return;
 
                     default:
-                        System.out.println("⚠️ Invalid choice.");
+                        System.out.println(" Invalid choice.");
                 }
             } catch (Exception e) {
                 System.out.println("Unexpected Error: " + e.getMessage());
